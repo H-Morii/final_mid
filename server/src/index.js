@@ -11,7 +11,6 @@ app.use(express.json());
 app.use(cors());
 
 // todos routes
-app.post("/", (req, res) => {});
 
 //test
 app.get("/", (req, res) => {
