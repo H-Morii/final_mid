@@ -8,11 +8,7 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: "https://final-front-0r0w.onrender.com",
-  })
-);
+app.use(cors());
 
 //Get a todo
 app.post("/final_table", async (request, response) => {
