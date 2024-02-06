@@ -11,8 +11,16 @@ app.use(express.json());
 app.use(cors());
 
 // todos routes
+app.get("/final_table", async (req, res) => {
+  try {
+    const allTodo = await knex("final_table").select("*");
 
-//test
+    res.send(allTodo);
+  } catch (err) {
+    console.log(err.message);
+  }
+});
+// test;
 app.get("/", (req, res) => {
   res.send("What's up brooo ?!⚡️");
 });
